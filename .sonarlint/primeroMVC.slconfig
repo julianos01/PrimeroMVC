@@ -1,0 +1,12 @@
+{
+  "ServerUri": "http://localhost:9000/",
+  "Organization": null,
+  "ProjectKey": "primeroMVC",
+  "ProjectName": "primeroMVC",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AW2ty_-AzwSgesvgHumv",
+      "ProfileTimestamp": "2019-10-08T18:54:50-05:00"
+    }
+  }
+}
