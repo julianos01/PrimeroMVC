@@ -1,0 +1,47 @@
+﻿@model List<Modelo.TAlumno>
+@{ 
+    ViewBag.Title = "Inicio";
+    Layout = " ~/Views/Shared/Layout.cshtml";
+
+}
+
+
+<h2 class="page-header">Alumnos <a href="~/Home/Crud/"><input type="button" class="btn btn-danger margen" value="Crear Nuevo" /></a><a href="~/Home/Logueo/"><input type="button" class="btn btn-info test" value="Salir" /></a></h2>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th style="width:200px">Sexo</th>
+                <th style="width:200px">Fecha de nacimiento</th>
+                <th style="width:200px"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            
+                @foreach (var m in Model)
+                {
+                    <tr>
+                        <td>@(m.Nombre+" "+m.Apellido)</td>
+                        <td>@(m.Sexo==1 ? "Hombre" : "Mujer" )</td>
+                        
+                        <td>@m.fnacimiento</td>
+                        <td>
+                        <a class="btn btn-xs btn-default " href="~/Home/ver/@m.id">Visualizar </a> 
+                        <a class="btn btn-xs btn-primary " href="~/Home/Crud/@m.id">Editar </a> 
+                        <a onclick="return confirm('¿Esta seguro de Eliminar el registro?');" class="btn btn-xs btn-danger " href="~/Home/eliminar/@m.id">Eliminar </a> 
+                        </td>
+                      
+                        
+
+                    </tr>
+
+                }
+            
+        </tbody>
+        
+    </table>
+
+

@@ -1,0 +1,77 @@
+﻿@model Modelo.login
+@{
+    ViewBag.Title = "logueo";
+    Layout = "~/Views/Shared/Layout.cshtml";
+ //   List<Modelo.login> Usuarios = ViewBag.listarusuarios;
+}
+
+<h2>logueo</h2>
+
+
+
+
+<div class="divlogin">
+    @using (Html.BeginForm("logueo", "Home", FormMethod.Post, new { id = "frm-login" }))
+    {
+        @Html.AntiForgeryToken()
+       
+        @Html.ValidationSummary(true)
+
+
+        @*@Html.ValidationSummary(true, "", new { @class = "label label-danger" })*@
+
+        <div class="form-group">
+                @Html.LabelFor(x => x.ceduser, "Usuario")
+                @Html.TextBoxFor(x => x.ceduser, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ceduser)
+            </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.passuser, "Password")
+            @Html.PasswordFor(x => x.passuser, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.passuser)
+        </div>
+
+
+    <!--    <input type="submit" class="btn btn-default" value="Ingresar" />
+
+        <h1> Aqui se debe evaluar el objeto json para devolver el mensaje de login</h1>-->
+        <div class="text-right">
+            <button data-ajax="true"  type="submit" class="btn btn-default">Validar Login</button>
+
+        </div>
+
+
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#frm-login").submit(function () {
+            var form=$(this);
+            $.ajax({
+                dataType: 'JSON',
+                type: 'POST',
+                url: form.attr('action'),
+                data:form.serialize(),
+                success: function (r) {
+                    if(r.response)
+                    {
+                        window.location.href = r.href;
+                    }
+                    else
+                    {
+                        alert(r.message);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + ' ' + errorThrown);
+                }
+
+            });
+            return false;
+        })
+    })
+</script>
+
+
+  

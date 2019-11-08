@@ -1,0 +1,12 @@
+A
+8C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\Alumno.csutf-8F
+=C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\AlumnoCurso.csutf-8@
+7C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\Curso.csutf-8@
+7C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\login.csutf-8R
+IC:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\Properties\AssemblyInfo.csutf-8H
+?C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\ResponseModel.csutf-8C
+:C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\TAdjunto.csutf-8B
+9C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\TAlumno.csutf-8@
+7C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\TSexo.csutf-8G
+>C:\Users\LENOVO\Source\Repos\primeroMVC\Modelo\UdemyContext.csutf-8`
+UC:\Users\LENOVO\AppData\Local\Temp\.NETFramework,Version=v4.5.2.AssemblyAttributes.csutf-8
